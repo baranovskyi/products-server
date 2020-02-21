@@ -5,6 +5,7 @@ const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const databaseUrl =
+  process.env.MONGODB_URI ||
   "mongodb+srv://admin:admin@cluster0-30ljv.mongodb.net/test?retryWrites=true&w=majority";
 let db;
 MongoClient.connect(
@@ -18,6 +19,7 @@ MongoClient.connect(
     });
   }
 );
+
 app.get("/", (req, res) => {
   res.redirect("/all-products");
 });
