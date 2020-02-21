@@ -4,7 +4,7 @@
   "description": "This server has been created for storing products",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "node index.js"
   },
   "author": "baranovskyi",
   "license": "ISC",
