@@ -6,7 +6,7 @@ const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const databaseUrl =
   process.env.MONGODB_URI ||
-  "mongodb+srv://admin:admin@cluster0-30ljv.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb://admin:admin@ds261521.mlab.com:61521/heroku_pgs4d7cl";
 let db;
 MongoClient.connect(
   databaseUrl,
