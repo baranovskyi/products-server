@@ -7,7 +7,7 @@ const ObjectId = require("mongodb").ObjectID;
 const databaseUrl =
   "mongodb+srv://admin:admin@cluster0-30ljv.mongodb.net/test?retryWrites=true&w=majority";
 let db;
-let port = process.env.port || 3000;
+let port = process.env.PORT || 3000;
 MongoClient.connect(
   databaseUrl,
   { useUnifiedTopology: true },
