@@ -7,14 +7,15 @@ const ObjectId = require("mongodb").ObjectID;
 const databaseUrl =
   "mongodb+srv://admin:admin@cluster0-30ljv.mongodb.net/test?retryWrites=true&w=majority";
 let db;
+let port = 3000 || process.env.PORT;
 MongoClient.connect(
   databaseUrl,
   { useUnifiedTopology: true },
   (err, client) => {
     if (err) return console.log(err);
     db = client.db("storeProducts");
-    app.listen(3000, () => {
-      console.log("database is on port 3000");
+    app.listen(port, (req, res) => {
+      console.log("server works");
     });
   }
 );
