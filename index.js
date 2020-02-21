@@ -13,7 +13,7 @@ MongoClient.connect(
   { useUnifiedTopology: true },
   (err, client) => {
     if (err) return console.log(err);
-    db = client.db("storeProducts");
+    db = client.db("heroku_pgs4d7cl");
     app.listen(process.env.PORT || 3000, (req, res) => {
       console.log("server works");
     });
